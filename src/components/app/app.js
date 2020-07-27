@@ -1,10 +1,8 @@
 import React from "react";
-import ReactDOM from 'react-dom';
-
-import AppHeader from '../app-header/app-header';
-import SearchPanel from '../search-panel/SearchPanel';
-import TodoList from '../todo-list/todo-list';
-import ItemStatusFilter from '../item-status-filter/item-status-filter';
+import AppHeader from '../app-header';
+import SearchPanel from '../search-panel';
+import TodoList from '../todo-list';
+import ItemStatusFilter from '../item-status-filter';
 import './app.css';
 
 const App = () => {
@@ -12,7 +10,7 @@ const App = () => {
     const todoData = [
         {label: 'Drink Coffee', important: false, id: 1 },
         {label: 'Learn React.JS', important: true, id: 2 },
-        {label: 'Do something interesting', important: false, id: 3 }
+        {label: 'Do sport', important: false, id: 3 }
     ];
 
     return (
@@ -23,7 +21,9 @@ const App = () => {
                 <ItemStatusFilter />
             </div>
 
-            <TodoList todos={todoData} />
+            <TodoList
+                todos={todoData}
+                onDeleted={ (id) => console.log('del', id)} />
         </div>
     );
 };
