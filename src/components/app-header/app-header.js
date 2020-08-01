@@ -5,7 +5,7 @@ const AppHeader = ({toDo, done}) => {
     return (
         <div className="app-header d-flex">
             <h1 className="pl-3" >Todo List</h1>
-            <h2 className="pr-3" >{toDo} more to do, {done} done</h2>
+            <h2 className="pr-1" >{toDo} more to do, {done} done </h2>
         </div>
     );
 };
